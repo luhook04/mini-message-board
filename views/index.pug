@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  head
+    h1= title
+    p Welcome to #{title}
+  body
+    a(href="/new") Compose Message
+    each message in messages
+      h2= message.user
+      p.description= message.text 
+        p.date= message.added

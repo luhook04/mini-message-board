@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	body 
+		a(href="/") Back
+		.form-container 
+			form(method='POST', action="/new")
+				input(type='text', placeholder='Username' name='author' id='author-input')
+				input(type="text", name="message" id="message-input" placeholder="Enter message" required=true) 
+				button(type='submit' id='submit-btn')= 'Post'
